@@ -18,7 +18,7 @@
             color: #007bff;
             font-size: 2.5rem;
             font-weight: bold;
-            animation: fadeInDown 0.7s ease;
+            animation: fadeInDown 0.7s ease; //deberia entrar por arriba 
         }
     }
 
@@ -37,11 +37,11 @@
                 padding: 0 15px;
                 margin-bottom: 1rem;
 
-                @include md  { // Estilos para dispositivos más grandes
+                @include md  { // Estilos para dispositivos más grandes 
                     width: 50%;
                 }
 
-                @include xs{
+                @include xs{ //para mobile que ocupoe toda la pantalla
                     width: 100%;
                 }
             }
