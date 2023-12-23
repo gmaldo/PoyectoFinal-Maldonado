@@ -314,64 +314,119 @@ img {
   filter: blur(2px);
 }
 
-/* _contact-form.scss */
-.contact-form h1 {
+.contact-form-section {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+.contact-form-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.contact-form-section .container h1 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-.contact-form form .mb-3 {
   margin-bottom: 1.5rem;
+  color: #007bff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: fadeInDown 0.7s ease;
 }
-.contact-form form label {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
+@media (max-width: 767px) {
+  .contact-form-section form .row {
+    flex-direction: column;
+  }
 }
-.contact-form form input,
-.contact-form form select,
-.contact-form form textarea {
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  border: 1px solid #ced4da;
-}
-.contact-form form input:focus,
-.contact-form form select:focus,
-.contact-form form textarea:focus {
-  border-color: #6cb2eb;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(108, 178, 235, 0.25);
-}
-.contact-form form button {
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-.contact-form form .btn-container {
+.contact-form-section form .row {
   display: flex;
-  justify-content: right;
+  margin: 0 -15px;
 }
-.contact-form form .btn-primary {
-  background-color: #007bff;
+.contact-form-section form .row .col-md-6 {
+  padding: 0 15px;
+  margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  .contact-form-section form .row .col-md-6 {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .contact-form-section form .row .col-md-6 {
+    width: 100%;
+  }
+}
+.contact-form-section form .mb-3 {
+  position: relative;
+}
+.contact-form-section form .mb-3 label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.contact-form-section form .mb-3 input[type=text],
+.contact-form-section form .mb-3 input[type=email],
+.contact-form-section form .mb-3 input[type=tel],
+.contact-form-section form .mb-3 select,
+.contact-form-section form .mb-3 textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.3s ease;
+}
+.contact-form-section form .mb-3 input[type=text]:focus,
+.contact-form-section form .mb-3 input[type=email]:focus,
+.contact-form-section form .mb-3 input[type=tel]:focus,
+.contact-form-section form .mb-3 select:focus,
+.contact-form-section form .mb-3 textarea:focus {
   border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
 }
-.contact-form form .btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+.contact-form-section form .mb-3 input[type=checkbox] {
+  margin-right: 5px;
 }
-.contact-form form .btn-secondary {
-  background-color: #6c757d;
-  border-color: #6c757d;
+.contact-form-section form .btn-container {
+  text-align: right;
+  margin-top: 1rem;
 }
-.contact-form form .btn-secondary:hover {
-  background-color: #5a6268;
-  border-color: #5a6268;
+.contact-form-section form .btn-container button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: fadeInUp 0.7s ease;
+}
+.contact-form-section form .btn-container button:hover {
+  background-color: #0062cc;
 }
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 /* _concerts.scss */
 .concerts__next {
   /* Estilos para la sección del próximo concierto */
