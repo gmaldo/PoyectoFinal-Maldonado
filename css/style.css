@@ -584,6 +584,7 @@ img {
 .gallery__image-grid-section {
   /* Estilos para la sección del grid de imágenes */
   margin-top: 20px; /* Agrega un espacio de 20px hacia arriba */
+  background-color: #551bb3;
 }
 .gallery__image-grid-section .image-grid {
   display: grid;

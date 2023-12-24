@@ -37,10 +37,11 @@
     &__image-grid-section {
       /* Estilos para la sección del grid de imágenes */
       margin-top: 20px; /* Agrega un espacio de 20px hacia arriba */
-  
+      background-color: #551bb3;
       .image-grid {
         display: grid;
         gap: 20px;
+
   
         @include sm {
           grid-template-columns: 1fr; // En pantallas pequeñas, una columna
@@ -51,7 +52,7 @@
         }
   
         @include lg {
-          grid-template-columns: repeat(5, 1fr); // En pantallas grandes, 5 columnas
+           grid-template-columns: repeat(5, 1fr); // En pantallas grandes, 5 columnas
         }
   
         .grid-item {
@@ -88,7 +89,7 @@
           }
   
           @include md {
-            // Estilos para dispositivos móviles y tabletas
+            // Estilos para dispositivos móviles y tabletas porque no tienen mouse entonces siempre tiene que estar visivle
             .overlay {
               opacity: 1; // El overlay es siempre visible
             }
@@ -99,14 +100,14 @@
           }
   
           @include lg {
-            // Estilos para pantallas grandes
+            // Estilos para pantallas grandes que tienen mouse
             .overlay {
               opacity: 0; // El overlay inicialmente oculto
             }
   
             &:hover {
               img {
-                transform: scale(1.1); // Ajusta el valor según tu preferencia
+                transform: scale(1.1); 
               }
   
               .overlay {
