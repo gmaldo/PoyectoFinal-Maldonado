@@ -177,6 +177,7 @@ img {
   margin-bottom: 2rem;
 }
 .discography__latest-single.card {
+  background-color: #551bb3;
   border: 1px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -185,7 +186,7 @@ img {
   max-width: 200rem;
   display: flex;
   align-items: center; /* Centrar verticalmente */
-  animation: fadeInUp 0.5s ease-in forwards;
+  animation: fadeInUp 0.5s;
 }
 @media (min-width: 1200px) {
   .discography__latest-single.card {
@@ -198,7 +199,30 @@ img {
   }
 }
 .discography__latest-single.card:hover {
-  transform: scale(1.05);
+  transform: scale(1.4);
+}
+@media (min-width: 1200px) {
+  .discography__latest-single.card:hover .card-title {
+    font-size: 4rem;
+    animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+}
+@media (min-width: 992px) {
+  .discography__latest-single.card:hover {
+    transform: scale(1.05);
+  }
+  .discography__latest-single.card:hover .card-title {
+    font-size: 4rem;
+    animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+}
+@media (max-width: 767px) {
+  .discography__latest-single.card:hover {
+    transform: scale(1.02);
+  }
+  .discography__latest-single.card:hover .card-title {
+    font-size: 3rem;
+  }
 }
 .discography__latest-single.card .card-img-top {
   border-radius: 8px;
@@ -224,6 +248,10 @@ img {
 }
 .discography__latest-single.card .card-title {
   font-size: 1.5rem;
+}
+.discography__latest-single.card .card-title:active {
+  font-size: 4rem;
+  animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 .discography__latest-single.card .card-text {
   font-size: 1.2rem;

@@ -12,6 +12,7 @@
   }
   &__latest-single {
     &.card {
+      background-color: $color-primary;
       border: 1px solid #ddd;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
@@ -20,7 +21,7 @@
       max-width: 200rem;
       display: flex;
       align-items: center; /* Centrar verticalmente */
-      animation: fadeInUp 0.5s ease-in forwards;
+      animation: fadeInUp 0.5s;
 
       @include lg {
         flex-direction: row;
@@ -30,7 +31,26 @@
       }
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1.4);
+        @include lg{
+          .card-title {
+              font-size: 4rem;
+              animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          }
+        }
+        @include md {
+          transform: scale(1.05);
+          .card-title {
+            font-size: 4rem;
+            animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          }
+        }
+        @include xs {
+          transform: scale(1.02);
+          .card-title {
+            font-size: 3rem;
+          }
+        }
       }
    
 
@@ -60,10 +80,16 @@
           text-align: left;
           margin-left: 20px;
         }
+
       }
 
       .card-title {
         font-size: 1.5rem;
+        &:active{
+          font-size: 4rem;
+          animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+
+        }  
       }
 
       .card-text {
