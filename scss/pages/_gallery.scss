@@ -37,19 +37,19 @@
     &__image-grid-section {
       /* Estilos para la sección del grid de imágenes */
       margin-top: 20px; /* Agrega un espacio de 20px hacia arriba */
-      
+  
       .image-grid {
         display: grid;
         gap: 20px;
-        
+  
         @include sm {
           grid-template-columns: 1fr; // En pantallas pequeñas, una columna
         }
-        
+  
         @include md {
           grid-template-columns: repeat(3, 1fr); // En pantallas medianas, 3 columnas
         }
-        
+  
         @include lg {
           grid-template-columns: repeat(5, 1fr); // En pantallas grandes, 5 columnas
         }
@@ -70,38 +70,56 @@
   
           .overlay {
             position: absolute;
-            top: 0;
+            bottom: 0; // Colocado en la parte inferior
             left: 0;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); // un gris traslucido
+            height: auto; // Altura automática
+            background: rgba(0, 0, 0, 0.7); // Fondo negro con transparencia
             display: flex;
             justify-content: center;
             align-items: center;
-            opacity: 0;
             transition: opacity 0.3s ease;
   
             p {
               color: #fff; 
               font-weight: bold;
+              margin: 10px; // Margen para el texto
             }
           }
   
-          &:hover {
-            img {
-              transform: scale(1.1); // Ajusta el valor según tu preferencia
+          @include md {
+            // Estilos para dispositivos móviles y tabletas
+            .overlay {
+              opacity: 1; // El overlay es siempre visible
             }
   
+            &:hover img {
+              transform: none; // Sin transformación al hacer hover
+            }
+          }
+  
+          @include lg {
+            // Estilos para pantallas grandes
             .overlay {
-              opacity: 1;
+              opacity: 0; // El overlay inicialmente oculto
+            }
+  
+            &:hover {
+              img {
+                transform: scale(1.1); // Ajusta el valor según tu preferencia
+              }
+  
+              .overlay {
+                opacity: 1;
+              }
             }
           }
         }
       }
     }
-    
+  
     @include sm {
-s      .gallery__carousel-section {
+      .gallery__carousel-section {
         margin-bottom: 10px;
       }
       
