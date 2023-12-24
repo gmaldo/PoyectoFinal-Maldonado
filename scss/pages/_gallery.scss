@@ -2,11 +2,15 @@
 
 .gallery {
     &__carousel-section {
+      .container{
+        margin: 0px;
+        padding: 0px
+      }
       /* Estilos para la sección del carrusel */
       margin-bottom: 20px; /* Agrega un espacio de 20px hacia abajo */
       
       .carousel {
-        width: 100%;
+        width: 100vw;
         height: 100vh; // Ocupa toda la altura de la ventana
         overflow: hidden;
         margin: 0;

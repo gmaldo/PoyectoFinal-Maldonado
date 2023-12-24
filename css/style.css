@@ -560,8 +560,12 @@ img {
   /* Estilos para la sección del carrusel */
   margin-bottom: 20px; /* Agrega un espacio de 20px hacia abajo */
 }
+.gallery__carousel-section .container {
+  margin: 0px;
+  padding: 0px;
+}
 .gallery__carousel-section .carousel {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   margin: 0;
