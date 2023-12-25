@@ -729,6 +729,12 @@ img {
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
+@media (min-width: 1200px) {
+  .gallery__image-grid-section .image-grid .grid-item:hover {
+    transform: scale(2);
+    z-index: 1;
+  }
+}
 .gallery__image-grid-section .image-grid .grid-item .overlay {
   position: absolute;
   bottom: 0;

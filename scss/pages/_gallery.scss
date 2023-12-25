@@ -68,6 +68,12 @@
             border-radius: 8px;
             transition: transform 0.3s ease;
           }
+          &:hover{
+          @include lg{  
+            transform: scale(2);
+            z-index: 1;
+            }
+          }
   
           .overlay {
             position: absolute;
