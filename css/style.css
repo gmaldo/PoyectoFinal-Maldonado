@@ -41,7 +41,6 @@
 
 .music,
 .concert {
-  height: 100vh;
   width: 100%;
   text-align: center;
   padding: 20px;
@@ -49,6 +48,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 1200px) {
+  .music,
+  .concert {
+    height: 100vh;
+  }
+}
+@media (max-width: 767px) {
+  .music,
+  .concert {
+    height: 100%;
+  }
 }
 .music .music_row,
 .concert .music_row {
@@ -115,6 +126,38 @@
 
 .music {
   background-color: #551bb3;
+}
+
+.music p {
+  color: white;
+}
+
+.music h2 {
+  font-weight: bolder;
+}
+@media (min-width: 1200px) {
+  .music h2 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 767px) {
+  .music h2 {
+    font-size: 2rem;
+  }
+}
+
+.concert h2 {
+  font-weight: bolder;
+}
+@media (min-width: 1200px) {
+  .concert h2 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 767px) {
+  .concert h2 {
+    font-size: 2rem;
+  }
 }
 
 .concert {

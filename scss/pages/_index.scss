@@ -23,7 +23,12 @@
 
 .music,
 .concert {
-    height: 100vh;
+    @include lg {
+        height: 100vh;
+    }
+    @include xs {
+        height: 100%;
+    }
     width: 100%;
     text-align: center;
     padding: 20px; // Ajusta el espaciado según tus necesidades
@@ -90,6 +95,27 @@
 
 .music{
     background-color: $color-primary;
+}
+.music p{
+    color: white;
+}
+.music h2{
+    font-weight: bolder;
+    @include lg{
+        font-size: 5rem;
+    }
+    @include xs{
+        font-size: 2rem;
+    }
+}
+.concert h2{
+    font-weight: bolder;
+    @include lg{
+        font-size: 5rem;
+    }
+    @include xs{
+        font-size: 2rem;
+    }
 }
 .concert{
     background-color: $color-secondary;
