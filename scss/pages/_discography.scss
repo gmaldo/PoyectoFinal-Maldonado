@@ -133,14 +133,30 @@
           width: 80%;
           margin: auto;
         }
-        .list-group-item{
-            &:hover{
-                font-weight: bold;
-                text-decoration: underline;
-                font-size: 1.1em
-            }
-        
-            
+        /* Estilos para la lista de pistas */
+        .list-group-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 5px; /* Espacio entre elementos */
+        }
+
+        /* Estilos para el botón "Escúchalo" */
+        .btn-primary {
+          background-color: #007bff;
+          border-color: #007bff;
+          padding: 0.3rem 1rem; /* Ajusta el espaciado del botón */
+        }
+
+        .btn-primary:hover {
+          background-color: #0056b3;
+          border-color: #0056b3;
+        }
+
+        /* Estilos para la duración */
+        .duration {
+          font-weight: bold;
+          margin-right: 10px; /* Espacio entre la duración y el botón */
         }
 
         @include sm {

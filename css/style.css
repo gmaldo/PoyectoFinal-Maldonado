@@ -313,6 +313,9 @@ img {
 }
 .discography__albums-container .album {
   text-align: center;
+  /* Estilos para la lista de pistas */
+  /* Estilos para el botón "Escúchalo" */
+  /* Estilos para la duración */
 }
 .discography__albums-container .album .img {
   max-width: 100%;
@@ -326,10 +329,24 @@ img {
   width: 80%;
   margin: auto;
 }
-.discography__albums-container .album .list-group-item:hover {
+.discography__albums-container .album .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px; /* Espacio entre elementos */
+}
+.discography__albums-container .album .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 0.3rem 1rem; /* Ajusta el espaciado del botón */
+}
+.discography__albums-container .album .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+.discography__albums-container .album .duration {
   font-weight: bold;
-  text-decoration: underline;
-  font-size: 1.1em;
+  margin-right: 10px; /* Espacio entre la duración y el botón */
 }
 @media (min-width: 768px) {
   .discography__albums-container .album {
