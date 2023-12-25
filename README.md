@@ -28,7 +28,8 @@ El proyecto consiste en la creación de un sitio web que cumple con los siguient
 
 1. Clona este repositorio en tu máquina local usando el siguiente comando:
    git clone https://github.com/gmaldo/PoyectoFinal-Maldonado.git
-   sass --watch scss/style.scss css/style.c
+2. Para compilar CSS
+     sass --watch scss/style.scss css/style.c
 
 ## DEPLOY
     Poyecto desplegado en Vercel:
