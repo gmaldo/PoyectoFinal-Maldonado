@@ -25,7 +25,7 @@
 .color5 { #a9f04d };
 */
 .banner {
-  background: url("../img/singerpics/imagen4.jpg") center/cover no-repeat;
+  background: url("../img/singerpics/imagen4.webp") center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
