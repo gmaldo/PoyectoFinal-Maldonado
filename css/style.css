@@ -291,12 +291,15 @@ img {
 }
 .discography__latest-single.card .card-title {
   font-size: 1.5rem;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 .discography__latest-single.card .card-title:active {
   font-size: 4rem;
   animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 .discography__latest-single.card .card-text {
+  color: white;
   font-size: 1.2rem;
 }
 .discography__albums h2 {
@@ -347,6 +350,7 @@ img {
 .discography__albums-container .album .duration {
   font-weight: bold;
   margin-right: 10px; /* Espacio entre la duración y el botón */
+  flex-shrink: 0; /* Evita que la duración se ajuste automáticamente */
 }
 @media (min-width: 768px) {
   .discography__albums-container .album {
